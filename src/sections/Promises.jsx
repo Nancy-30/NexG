@@ -9,7 +9,6 @@ export default function Promises() {
         offset: ["start end", "end center"]
     })
 
-    // const slideY = useTransform(scrollYProgress, [0, 0.2, 0.3, 0.4, 1], ["250px", "350px", "450px" , "200vh" , "250vh"])
     const scale = useTransform(scrollYProgress, [0, 0.2, 0.5, 1], [0.5, 0.8, 1.2, 1])
 
     const opacity = useTransform(scrollYProgress, [0, 0.3, 0.9, 1], [0, 0, 1, 0]);

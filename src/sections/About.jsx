@@ -12,7 +12,6 @@ export default function About() {
 
     const scale = useTransform(scrollYProgress, [0.1, 0.5], [3, 1.5])
     const x = useTransform(scrollYProgress, [0.1, 0.25, 0.5, 0.6], ["60%", "55%", "0%", "-20%"]);
-    const divX = useTransform(scrollYProgress, [0.8, 1], ["80%", "100%"]);
     const opacity = useTransform(scrollYProgress, [0.9, 1], [1, 0]);
 
     return (
