@@ -41,19 +41,19 @@ export default function QualitiesHeading() {
             className='flex h-[500vh] items-start justify-start mt-[60vh]'>
 
             <motion.div
-                className='sticky top-[50%] left-[50%] min-h-[30rem] min-w-[30rem] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap before:absolute before:inset-0 before:scale-[var(--scale)] before:border-[2.5rem] before:border-[#0AFFC5] before:opacity-[var(--opacity-border)]'>
+                className='sticky top-[50%] left-[50%] min-h-[25rem] min-w-[25rem] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap before:absolute before:inset-0 before:scale-[var(--scale)] before:border-[2.5rem] before:border-[#0AFFC5] before:opacity-[var(--opacity-border)]'>
 
                 <motion.p
                     style={{ x: textX, y: "-50%" }}
                     aria-hidden
-                    className='whitespace-nowrap min-w-screen absolute top-1/2 left-[calc(-50vw+25rem)] text-[16rem] text-wihte'>
+                    className='whitespace-nowrap min-w-screen absolute top-1/2 left-[calc(-50vw+25rem)] text-[10rem] text-wihte opacity-65'>
                     Why Choose US?
                 </motion.p>
 
                 <motion.p
                     aria-hidden
                     style={{ x: textX, y: "-50%" }}
-                    className="whitepspace-nowrap min-w-screen absolute top-1/2 left-[calc(-50vw+25rem)] z-[11] text-[15rem] text-transparent [-webkit-text-stroke:1px_var(white] text-white">
+                    className="whitepspace-nowrap min-w-screen absolute top-1/2 left-[calc(-50vw+25rem)] z-[11] text-[9rem] text-transparent text-white">
                     Why Choose US?
                 </motion.p>
 

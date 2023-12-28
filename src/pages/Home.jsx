@@ -11,11 +11,12 @@ import Footer from '../sections/Footer'
 export default function Home() {
 
     return (
-        <div className='bg-[#0C0C1A]'>
+        <div className='bg-[#050520]'>
             <NavBar />
             <Landing />
             <div className="relative z-10 w-full overflow-x-clip">
                 <About />
+                <Services />
                 <Qualities />
             </div>
             <FirstStep />

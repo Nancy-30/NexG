@@ -17,9 +17,9 @@ export default function About() {
 
     return (
         <div
-            className='relative justify-center flex top-[700px] overflow-hidden mb-8 '>
+            className='relative justify-center flex top-[50rem] mb-8 '>
             <motion.section
-                style={{ opacity }} className="flex flex-col lg:flex-row items-center justify-center lg:justify-between w-full lg:h-[680px] p-[100px] gap-7 bg-[#050520] shadow-xl shadow-gray-800 z-60" ref={targetRef}>
+                style={{ opacity }} className="flex flex-col lg:flex-row items-center justify-center lg:justify-between w-full lg:h-[680px] p-[100px] gap-7 bg-[#050520]  z-60" ref={targetRef}>
                 <div className="flex flex-col gap-5">
                     <h1 className="text-5xl lg:text-6xl font-bold text-white">Let's Shape Technology</h1>
                     <div className="h-1 w-[120px] lg:w-[250px] bg-[#0AFFC5] rounded-lg"></div>

@@ -11,7 +11,7 @@ export default function Landing() {
         offset: ["end end", "end center"]
     })
 
-    const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
+    const opacity = useTransform(scrollYProgress, [0, 1], [1, 0])
     const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
     const position = useTransform(scrollYProgress, (pos) => {
         return pos === 1 ? "relative" : "fixed";
