@@ -8,19 +8,12 @@ export default function QualityDescription() {
         offset: ["start end", "end end"],
     });
 
-    const scale = useTransform(scrollYProgress, [0, 0.9, 1], [0.8, 0.8, 1]);
     const x = useTransform(scrollYProgress, [0.3, 1], ["50%", "0%"]);
 
     const opacity = useTransform(
         scrollYProgress,
         [0, 0.3, 1,],
         [1, 1, 1]
-    );
-
-    const text1Y = useTransform(
-        scrollYProgress,
-        [0.3, 0.4, 0.5],
-        ["30px", "0px", "-30px"]
     );
 
     const text2Opacity = useTransform(
