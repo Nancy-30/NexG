@@ -7,6 +7,7 @@ import Qualities from '../sections/Qualities'
 import FirstStep from '../sections/FirstStep'
 import Guarantee from '../sections/Guarantee'
 import Footer from '../sections/Footer'
+import Promises from '../sections/Promises'
 
 export default function Home() {
 
@@ -18,10 +19,12 @@ export default function Home() {
                 <About />
                 <Services />
                 <Qualities />
+
+                <FirstStep />
+                <Promises />
+                <Guarantee />
+                <Footer />
             </div>
-            <FirstStep />
-            <Guarantee />
-            <Footer />
         </div>
     )
 }

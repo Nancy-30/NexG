@@ -8,7 +8,7 @@ export default function QualityDescription() {
         offset: ["start end", "end end"],
     });
 
-    const scale = useTransform(scrollYProgress, [0, 0.9, 1], [0.8, 0.8, 0.8]);
+    const scale = useTransform(scrollYProgress, [0, 0.9, 1], [0.8, 0.8, 1]);
     const x = useTransform(scrollYProgress, [0.3, 1], ["50%", "0%"]);
 
     const opacity = useTransform(
@@ -45,7 +45,7 @@ export default function QualityDescription() {
     const yTextPos = useTransform(
         scrollYProgress,
         [0.3, 0.9, 1],
-        ["30px", "0px", "-400px"]
+        ["30px", "0px", "-450px"]
     );
 
     const yAll = useTransform(
