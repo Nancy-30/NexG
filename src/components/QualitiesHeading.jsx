@@ -10,7 +10,7 @@ export default function QualitiesHeading() {
         offset: ["start end", "end center"]
     })
 
-    const textX = useTransform(scrollYProgress, [0.1, 0.7], ["100%", "-120%"]);
+    const textX = useTransform(scrollYProgress, [0.1, 0.7], ["100%", "-150%"]);
 
     const opacitySection = useTransform(scrollYProgress, [0.1, 0.5], [0, 1]);
 
@@ -41,19 +41,19 @@ export default function QualitiesHeading() {
             className='flex h-[500vh] items-start justify-start mt-[60vh]'>
 
             <motion.div
-                className='sticky top-[50%] left-[50%] min-h-[25rem] min-w-[25rem] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap before:absolute before:inset-0 before:scale-[var(--scale)] before:border-[2.5rem] before:border-[#0AFFC5] before:opacity-[var(--opacity-border)]'>
+                className='sticky top-[50%] left-[50%] min-w-[15rem] min-h-[15rem] md:min-h-[25rem] md:min-w-[25rem] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap before:absolute before:inset-0 before:scale-[var(--scale)] before:border-[1.5rem] md:before:border-[2.5rem] before:border-[#0AFFC5] before:opacity-[var(--opacity-border)]'>
 
                 <motion.p
                     style={{ x: textX, y: "-50%" }}
                     aria-hidden
-                    className='whitespace-nowrap min-w-screen absolute top-1/2 left-[calc(-50vw+25rem)] text-[10rem] text-wihte opacity-65'>
+                    className='whitespace-nowrap min-w-screen absolute top-1/2 left-[calc(-50vw+25rem)] text-[6rem] md:text-[10rem] text-wihte opacity-65'>
                     Why Choose US?
                 </motion.p>
 
                 <motion.p
                     aria-hidden
                     style={{ x: textX, y: "-50%" }}
-                    className="whitepspace-nowrap min-w-screen absolute top-1/2 left-[calc(-50vw+25rem)] z-[11] text-[9rem] text-transparent text-white">
+                    className="whitepspace-nowrap min-w-screen absolute top-1/2 left-[calc(-50vw+25rem)] z-[11] text-[5rem] md:text-[9rem] text-transparent text-white">
                     Why Choose US?
                 </motion.p>
 
@@ -63,9 +63,9 @@ export default function QualitiesHeading() {
                     y: "-50%",
                     x: "-50%",
                 }}
-                    className="absolute left-[70%] lg:left-1/2 top-1/2 text-[4rem] lg:text-[6rem] leading-tight text-white flex flex-col items-center gap-3">
+                    className="absolute left-[70%] lg:left-1/2 top-1/2 text-[2rem] md:text-[4rem] lg:text-[6rem] leading-tight text-white flex flex-col items-center gap-3">
                     WHY CHOOSE US?
-                    <div className='h-1 w-[350px] bg-[#0AFFC5] rounded-md'></div>
+                    <div className='h-1 w-[120px] md:w-[350px] bg-[#0AFFC5] rounded-md'></div>
                     <div className="fixed">
                         <div className="h-[300px] w-[300px] rounded-full bg-[#0AFFC5] opacity-15 blur-[60px] absolute top-[180px] -translate-x-[300%] hidden lg:block"></div>
                         <div className="h-[400px] w-[400px] rounded-full bg-[#0AFFC5] absolute top-[-130px] lg:top-[-160px] lg:left-[180px] opacity-10 blur-3xl"></div>
@@ -73,7 +73,7 @@ export default function QualitiesHeading() {
                 </motion.div>
 
                 <span className="absolute left-[calc(50%*var(--scale)+50%)] top-0 z-10 h-full w-[50vw] origin-left scale-[var(--scale)] bg-background opacity-[var(--opacity-border)]" />
-                <span className="absolute left-[calc(50%*var(--scale)+50%-(2.5rem*var(--scale)))] top-0 z-[12] h-full w-[50vw] origin-left scale-[var(--scale)] border-l-[2.5rem] border-[#0AFFC5] opacity-[var(--opacity-border)]" />
+                <span className="absolute left-[calc(50%*var(--scale)+50%-(1.5rem*var(--scale)))] md:left-[calc(50%*var(--scale)+50%-(2.5rem*var(--scale)))] top-0 z-[12] h-full w-[50vw] origin-left scale-[var(--scale)] border-l-[1.5rem] md:border-l-[2.5rem] border-[#0AFFC5] opacity-[var(--opacity-border)]" />
             </motion.div>
 
 

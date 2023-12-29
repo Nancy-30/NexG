@@ -13,7 +13,7 @@ export default function Landing() {
 
     const opacity = useTransform(scrollYProgress, [0, 1], [1, 0])
     const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
-    
+
 
 
     return (
@@ -25,11 +25,11 @@ export default function Landing() {
             </div>
             <motion.div
                 style={{ scale, opacity }}
-                className='p-10 lg:p-0 lg:w-[45%] fixed top-[28%] left-[5%] gap-8 flex flex-col items-center lg:items-start'>
+                className='p-2 md:p-10 lg:p-0 lg:w-[45%] fixed top-[15%] lg:top-[28%] left-[5%] gap-8 flex flex-col items-center lg:items-start'>
 
-                <div className='flex flex-col gap-7'>
-                    <p className='text-[#0AFFC5] text-2xl lg:text-3xl tracking-wider'>DESIGN, DEVELOP, DEPLOY, DELIVER</p>
-                    <h1 className='text-5xl lg:text-6xl font-bold text-[#d1cfd5]'>We Are Nex-Gen</h1>
+                <div className='flex flex-col gap-7 justify-center items-center '>
+                    <p className='text-[#0AFFC5] text-xl md:text-2xl lg:text-3xl tracking-wider text-center'>DESIGN, DEVELOP, DEPLOY, DELIVER</p>
+                    <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-[#d1cfd5]'>We Are Nex-Gen</h1>
                 </div>
 
                 <p className='tracking-wider text-lg font-semibold text-[#AEABB3] text-center lg:text-left'>With State-Of-The-Art Digital Engineering & Enterprise Modernisation Services. Your One Stop Solution For Software Engineering & Innovation</p>

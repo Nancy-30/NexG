@@ -14,6 +14,10 @@ export default function ServiceCarousel() {
     offset: ["start end", "end center"]
   })
   const X = useTransform(scrollYProgress, [0.2, 0.5], ["150%", "-350%"]);
+  const rightX = useTransform(scrollYProgress, [0.2, 0.6], ["150%", "-320%"]);
+  const leftX = useTransform(scrollYProgress, [0.3, 0.9], ["-290%", "250%"]);
+
+
   const opacity = useTransform(scrollYProgress, [0.2, 1], [1, 0]);
 
   const details = {
@@ -59,19 +63,64 @@ export default function ServiceCarousel() {
         </div>
 
         <motion.div
-          style={{ x: X, y: "-130%", opacity , transition: { duration: 1.5 } }}
-          className='w-[95%] flex gap-4 absolute left-[calc(-50vw+25rem)] text-[3rem] '>
+          style={{ x: X, y: "-130%", opacity, transition: { duration: 1.5 } }}
+          className='w-[95%] md:flex gap-4 absolute left-[calc(-50vw+25rem)] text-[3rem] hidden '>
 
           {Object.keys(details).map((key) => {
             const item = details[key];
             return (
-              <div key={key} className='relative min-w-[500px] h-[300px] bg-white border border-black rounded-xl flex justify-center items-center cursor-pointer'>
+              <div key={key} className='relative min-w-[300px] md:min-w-[500px] h-[150px] md:h-[300px] bg-white border border-black rounded-xl flex justify-center items-center cursor-pointer'>
 
                 <div className='absolute w-full h-full z-40 flex justify-center items-center transition-all duration-300 rounded-xl overflow-hidden'>
                   <img src={item.img1} alt={item.name} className='absolute w-full h-full z-0 filter transition-all duration-300 text-sm ' />
                 </div>
 
                 <p className='z-40 hover:text-[#0AFFC5] w-full h-full bg-gray-700 opacity-50 hover:opacity-100 hover:bg-transparent text-center hover:shadow-[0_5px_10px_rgba(8,_112,_184,_0.7)] rounded-xl transition-all duration-300 pt-24 text-white font-bold'>{item.name}
+                  <button type="button" class="absolute bottom-1 right-1 rounded-sm bg-[#0e0e31] py-2 px-4 md:py-2.5 md:px-4 text-sm md:text-sm tracking-widest text-[#b4b4c5] outline-none font-semibold z-40 ">LEARN MORE</button>
+                </p>
+              </div>
+            );
+          })}
+        </motion.div>
+
+
+
+        {/* for responsiveness */}
+        <motion.div
+          style={{ x: rightX, y: "-250%", opacity, transition: { duration: 1.5 } }}
+          className='w-[95%] flex gap-4 absolute left-[calc(-50vw+25rem)] text-[3rem] md:hidden '>
+
+          {Object.keys(details).slice(0, 3).map((key) => {
+            const item = details[key];
+            return (
+              <div key={key} className='relative min-w-[300px] md:min-w-[500px] h-[150px] md:h-[300px] bg-white border border-black rounded-xl flex justify-center items-center cursor-pointer'>
+
+                <div className='absolute w-full h-full z-40 flex justify-center items-center transition-all duration-300 rounded-xl overflow-hidden'>
+                  <img src={item.img1} alt={item.name} className='absolute w-full h-full z-0 filter transition-all duration-300 text-sm ' />
+                </div>
+
+                <p className='z-40 hover:text-[#0AFFC5] w-full h-full bg-gray-700 opacity-50 hover:opacity-100 hover:bg-transparent text-center hover:shadow-[0_5px_10px_rgba(8,_112,_184,_0.7)] rounded-xl transition-all duration-300 pt-11 md:pt-24 text-white font-bold'>{item.name}
+                  <button type="button" class="absolute bottom-1 right-1 rounded-sm bg-[#0e0e31] py-2 px-4 md:py-2.5 md:px-4 text-sm md:text-sm tracking-widest text-[#b4b4c5] outline-none font-semibold z-40 ">LEARN MORE</button>
+                </p>
+              </div>
+            );
+          })}
+        </motion.div>
+
+        <motion.div
+          style={{ x: leftX, y: "-130%", opacity, transition: { duration: 1.5 } }}
+          className='w-[95%] flex gap-4 absolute left-[calc(-50vw+25rem)] text-[3rem] md:hidden '>
+
+          {Object.keys(details).slice(-3).map((key) => {
+            const item = details[key];
+            return (
+              <div key={key} className='relative min-w-[300px] md:min-w-[500px] h-[150px] md:h-[300px] bg-white border border-black rounded-xl flex justify-center items-center cursor-pointer'>
+
+                <div className='absolute w-full h-full z-40 flex justify-center items-center transition-all duration-300 rounded-xl overflow-hidden'>
+                  <img src={item.img1} alt={item.name} className='absolute w-full h-full z-0 filter transition-all duration-300 text-sm ' />
+                </div>
+
+                <p className='z-40 hover:text-[#0AFFC5] w-full h-full bg-gray-700 opacity-50 hover:opacity-100 hover:bg-transparent text-center hover:shadow-[0_5px_10px_rgba(8,_112,_184,_0.7)] rounded-xl transition-all duration-300 pt-11 md:pt-24 text-white font-bold'>{item.name}
                   <button type="button" class="absolute bottom-1 right-1 rounded-sm bg-[#0e0e31] py-2 px-4 md:py-2.5 md:px-4 text-sm md:text-sm tracking-widest text-[#b4b4c5] outline-none font-semibold z-40 ">LEARN MORE</button>
                 </p>
               </div>

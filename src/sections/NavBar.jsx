@@ -7,7 +7,7 @@ export default function NavBar() {
 
     return (
         <div className='font-poppins text-white flex justify-end tracking-wider w-full fixed z-[101] bg-[#0C0C1A] shadow-sm shadow-[#111125]'>
-            <div className='absolute flex w-full text-2xl pt-5 p-3 justify-between '>
+            <div className='bg-[#0C0C1A] absolute flex w-full text-2xl pt-5 p-3 justify-between '>
                 <h1 className='z-10 ml-5'>NexG</h1>
                 <IoMenu className='black lg:hidden text-4xl' onClick={() => setIsOpen(!isOpen)} />
             </div>
